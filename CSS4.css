@@ -1,0 +1,49 @@
+H1 { 
+    font-size: 36pt;
+    font-family:Garamod;
+    font-style:italic; 
+    text-align:center; 
+    font-weight: demi-bold; 
+    text-decoration:underline; 
+    color: blue;
+    } 
+H2 { 
+    font-size: 18pt; 
+    font-family:Arial; 
+    font-style:normal; 
+    text-align:left; 
+    font-weight: extra-bold; 
+    text-decoration: blink; 
+    color: yellow; 
+    text-transform: uppercase; 
+    } 
+P { 
+    font-size: 12pt; 
+    font-family: Tahoma; 
+    text-align: right; 
+    font-weight: extra-light; 
+    color: white; 
+    text-indent: 2in; 
+    } 
+A:link { 
+    font-size: 12pt; 
+    font-family: adal; 
+    font-style: italic; 
+    font-weight: extra-light; 
+    color: white;
+    } 
+A:visited { 
+    font-size: 12pt; 
+    font-family: arial; 
+    font-style: italic; 
+    font-weight: extra-light; 
+    color: lime;
+    } 
+body { 
+    background-color: silver; 
+    color: red; 
+    } 
+div{ 
+    font: 'Opt "Arial"; 
+    color: lime;
+    } 
