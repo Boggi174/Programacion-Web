@@ -1,0 +1,72 @@
+<html>
+    <head>
+        <title>
+                Proyecto 
+        </title>
+    </head>
+    <body>
+        <H1 align='center'>
+            Proyecto
+        </H1>
+    <center>
+        <form>
+            <label for="Nivel1">
+                Nivel de grado
+            </label>
+            <br>
+            <select name="Nivel" id ='nivel'>
+                <option value="1">
+                    1
+                </option>
+                <option value="2">
+                    2
+                </option>
+                <option value="3">
+                    3
+                </option>
+                <option value="4">
+                    4
+                </option>
+                <option value="5">
+                    5
+                </option>
+                <option value="6">
+                    6
+                </option>
+            </select>
+            <br>
+            <label for="Tipo">
+                Que tipo de problemas desea?
+            </label>
+            <br>
+            <select name="Tipo" id='tipo'>
+                <option value="100">
+                    Suma
+                </option>
+                <option value="200">
+                    Resta
+                </option>
+                <option value="300">
+                    Multiplicacion
+                </option>
+                <option value="400">
+                    Division
+                </option>
+                <option value="500">
+                    Todos
+                </option>
+                </select>
+            <br>        
+            <button onclick="getURL()">Continuar</button> 
+        </form>
+    </center>
+    </body>
+    <script language='javascript' type="text/javascript">
+        var getURL = function(){
+            var option1 = document.getElementById('nivel').value;
+            var option2 = document.getElementById('tipo').value;
+            var URL = '\9.22-27_2.html?x=' + option1 + '&y=' + option2;
+            window.open(URL);
+        }
+    </script>
+</html>
