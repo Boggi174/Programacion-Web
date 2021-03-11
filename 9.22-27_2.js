@@ -13,7 +13,7 @@ function tipoDeProblema(b,x,y){
     switch(b){
     case '100':
         var resultado = parseInt(x)+parseInt(y);
-        document.write("<h3 id='clion'>"+x+ ' + ' + y + ' = ' +resultado+'</h3>');
+        document.write("<div id='clion'>"+x+ ' + ' + y + ' = ' +resultado+'</div>');
         return resultado;
         break;
     case '200':
@@ -73,5 +73,6 @@ function validateSol(a,b){
 }
 
 function refreshion(){
-    document.getElementById('clion').innerText=nivelDeProblema(queries[0])
+    getElementById('clion').innerText=nivelDeProblema(queries[0])
+   
 }
