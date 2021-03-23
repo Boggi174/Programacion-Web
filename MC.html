@@ -1,0 +1,378 @@
+<html>
+    <head>
+        <title>
+            Inciso 1 Examen Medio Curso
+        </title>
+    </head>
+    <body>
+        <h1 align='center'>
+            Convertidor de unidades
+        </h1>
+        <center>
+            <form>
+                <label for='B'>
+                    ¿Cuantos 
+               </label>
+               <select name='U2' id='U2'>
+                   <option value ='1'>
+                       Metros
+                   </option>
+                   <option value ='2'>
+                       Litros
+                   </option>
+                   <option value ='3'>
+                       Gramos
+                   </option>
+                   <option value ='4'>
+                       Centimetro
+                   </option>
+                   <option value ='5'>
+                       Kilogramo
+                   </option>
+                   <option value ='6'>
+                       Pulgadas
+                   </option>
+                   <option value ='7'>
+                       Pies
+                   </option>
+                   <option value ='8'>
+                       Millas
+                   </option>
+                   <option value ='9'>
+                       Libras
+                   </option>
+                   <option value ='10'>
+                       Onzas
+                   </option>
+                   <option value ='11'>
+                       Toneladas
+                   </option>
+               </select>
+                <label for='A'>
+                    hay en 
+                </label>
+                <textarea name='entrada' id='entrada' rows="1" cols="10" >
+                    
+                </textarea>
+                <select name='U1' id='U1'>
+                    <option value ='1'>
+                        Metros
+                    </option>
+                    <option value ='2'>
+                        Litros
+                    </option>
+                    <option value ='3'>
+                        Gramos
+                    </option>
+                    <option value ='4'>
+                        Centimetro
+                    </option>
+                    <option value ='5'>
+                        Kilogramo
+                    </option>
+                    <option value ='6'>
+                        Pulgadas
+                    </option>
+                    <option value ='7'>
+                        Pies
+                    </option>
+                    <option value ='8'>
+                        Millas
+                    </option>
+                    <option value ='9'>
+                        Libras
+                    </option>
+                    <option value ='10'>
+                        Onzas
+                    </option>
+                    <option value ='11'>
+                        Toneladas
+                    </option>
+                </select>
+                
+                <br><br>
+                <button onclick="convertir()" type="button">
+                    Convertir
+                </button>
+            </form>
+        </center>
+    </body>
+    <script language='javascript' type="text/javascript">
+        var convertir = function(){
+            var option1 = document.getElementById('entrada').value;
+            var option2 = document.getElementById('U1').value;
+            var option3 = document.getElementById('U2').value;
+            if (isNaN(option1)){
+                console.log('Error, opcion introducida no es un numero!');
+                alert('Error, el valor introducido no es un numero!');
+
+            }else 
+                console.log ('Valor introducido es un numero!');
+                switch (option2){
+                    case '1':
+                        if (option3 == '4' ){
+                            // m a cm
+                            var resultado = parseInt(option1) * 100;
+                            alert(parseInt(option1) + ' m  = ' + resultado + ' cm.' );
+                        }
+                        else if(option3 == '6'){
+                            // m a in
+                            var resultado = parseInt(option1) * 39.37010;
+                            alert(parseInt(option1) + ' m  = ' + resultado + ' in.' );
+                        }
+                        else if(option3 == '7' ){
+                            // m a ft
+                            var resultado = parseInt(option1) * 3.280840;
+                            alert(parseInt(option1) + ' m  = ' + resultado + ' ft.' );
+                        }
+                        else if (option3 == '8'){
+                            // m a milla
+                            var resultado = parseInt(option1) * 0.000621371;
+                            alert(parseInt(option1) + ' m  = ' + resultado + ' miles.' );
+                        }
+                        else if(option2 ==  option3 ){
+                            // m a m
+                            alert(parseInt(option1) + ' m  = ' + parseInt(option1) + ' m.' );
+                        }else
+                            alert('La conversion no es posible!');
+                        break;
+                    case '2':
+                        if(option2 == option3){
+                            // L a  L
+                            alert(parseInt(option1) + ' L  = ' + parseInt(option1) + ' L.' );
+                        }
+                        else if (option3 == '10'){
+                            // L a oz
+                            var resultado = parseInt(option1) * 33.814;
+                            alert(parseInt(option1) + ' L  = ' + resultado + ' oz.' );
+
+                        }else
+                        alert('La conversion no es posible!');
+                        break;
+                    case '3' :
+                        if(option2 == option3){
+                            // g a  g
+                            alert(parseInt(option1) + ' L  = ' + parseInt(option1) + ' L.' );
+                        }
+                        else if (option3 =='5'){
+                            // g a kg
+                            var resultado = parseInt(option1) * 0.001;
+                            alert(parseInt(option1) + ' g  = ' + resultado + ' kg.' );
+                        }
+                        else if(option3=='9'){
+                            //g a lb
+                            var resultado = parseInt(option1) / 454;
+                            alert(parseInt(option1) + ' g  = ' + resultado + ' lb.' );
+                        }
+                        else if(option3== '11'){
+                            // g a ton
+                            var resultado = parseInt(option1) / 907185;
+                            alert(parseInt(option1) + ' g  = ' + resultado + ' ton.' );
+                        }else
+                            alert('La conversion no es posible!');
+                        break;
+                    case '4':
+                        if(option2 == option3){
+                            // cm a cm
+                            alert(parseInt(option1) + ' cm  = ' + parseInt(option1) + ' cm.' );
+                        }
+                        else if (option3 =='1'){
+                            //cm a m
+                            var resultado = parseInt(option1) / 100;
+                            alert(parseInt(option1) + ' cm  = ' + resultado + ' m.' );
+                        }
+                        else if(option3 =='6'){
+                            // cm a in
+                            var resultado = parseInt(option1) * .393701;
+                            alert(parseInt(option1) + ' cm  = ' + resultado + ' in.' );
+                        }
+                        
+                        else if (option3 == '7'){
+                            //cm a ft
+                            var resultado = parseInt(option1) / 30.48;
+                            alert(parseInt(option1) + ' cm  = ' + resultado + ' ft.' );
+                        }
+                        else if (option3 == '8'){
+                            //cm a millas
+                            var resultado = parseInt(option1) / 160934;
+                            alert(parseInt(option1) + ' cm  = ' + resultado + ' millas.' );
+                        }
+                        else
+                            alert('La conversion no es posible!');   
+                        break;
+                    case '5':
+                        if(option2 == option3){
+                            // Kg a Kg
+                            alert(parseInt(option1) + ' Kg  = ' + parseInt(option1) + ' Kg.' );
+                        }
+                        else if (option3 == '3'){
+                            // Kg a g
+                            var resultado = parseInt(option1) * 1000;
+                            alert(parseInt(option1) + ' Kg  = ' + resultado + ' g.' );
+                        }
+                        else if(option3 == '9'){
+                            //Kg a lb
+                            var resultado = parseInt(option1) * 2.205;
+                            alert(parseInt(option1) + ' Kg  = ' + resultado + ' lb.' );
+                        }
+                        else if(option3 =='11'){
+                            //Kg a ton
+                            var resultado = parseInt(option1) / 907;
+                            alert(parseInt(option1) + ' Kg  = ' + resultado + ' ton.' );
+                        }
+                        else
+                            alert('La conversion no es posible!');    
+                        break;
+                    case '6':
+                        if(option2 == option3){
+                            // in a in
+                            alert(parseInt(option1) + ' in  = ' + parseInt(option1) + ' in.' );
+                        }
+                        else if (option3 == '1'){
+                            // in a m
+                            var resultado = parseInt(option1) / 39.37;
+                            alert(parseInt(option1) + ' in  = ' + resultado + ' m.' );
+                        }
+                        else if (option3 == '4'){
+                            //in a cm
+                            var resultado = parseInt(option1) * 2.54;
+                            alert(parseInt(option1) + ' in  = ' + resultado + ' cm.' );
+                        }
+                        else if (option3 == '7'){
+                            //in a ft
+                            var resultado = parseInt(option1) / 12;
+                            alert(parseInt(option1) + ' in  = ' + resultado + ' ft.' );
+                        }
+                        else if (option3 == '8'){
+                            // in a milla
+                            var resultado = parseInt(option1) / 63360;
+                            alert(parseInt(option1) + ' in  = ' + resultado + ' millas.' );
+                        }
+                        else
+                            alert('La conversion no es posible!');    
+                        break;
+                    case '7':
+                        if(option2 == option3){
+                            // ft a ft
+                            alert(parseInt(option1) + ' ft  = ' + parseInt(option1) + ' ft.' );
+                        }
+                        else if (option3 = '1'){
+                            // ft a m
+                            var resultado = parseInt(option1) * 3.281;
+                            alert(parseInt(option1) + ' m  = ' + resultado + ' ft.' );
+                        }
+                        else if (option3 == '4'){
+                            // ft a cm
+                            var resultado = parseInt(option1) / 30.48;
+                            alert(parseInt(option1) + ' ft  = ' + resultado + ' cm.' );
+                        }
+                        else if (option3=='6'){
+                            // ft a in
+                            var resultado = parseInt(option1) * 12;
+                            alert(parseInt(option1) + ' ft  = ' + resultado + ' in.' );
+                        }
+                        else if (option3 == '8'){
+                            //ft a milla
+                            var resultado = parseInt(option1) / 63360;
+                            alert(parseInt(option1) + ' in  = ' + resultado + ' millas.' );
+                        }
+                        else
+                            alert('La conversion no es posible!');    
+                        break;
+                    case '8':
+                        if(option2 == option3){
+                            // milla a milla
+                            alert(parseInt(option1) + ' milla  = ' + parseInt(option1) + ' milla.');
+                        }
+                        else if(option3 == '1'){
+                            // milla a m
+                            var resultado = parseInt(option1) * 1609;
+                            alert(parseInt(option1) + ' milla  = ' + resultado + ' m.' );
+                        }
+                        else if (option3 == '4'){
+                            // milla a cm
+                            var resultado = parseInt(option1) * 160900;
+                            alert(parseInt(option1) + ' milla  = ' + resultado + ' cm.' );
+                        }
+                        else if(option3=='6'){
+                            // milla a in
+                            var resultado = parseInt(option1) * 63360;
+                            alert(parseInt(option1) + ' milla  = ' + resultado + ' in.' );
+                        }
+                        else if( option3 == '7'){
+                            // milla a ft
+                            var resultado = parseInt(option1) * 5280;
+                            alert(parseInt(option1) + ' in  = ' + resultado + ' millas.' );
+                        }
+                        else
+                            alert('La conversion no es posible!');    
+                        break;
+                    case '9':
+                        if(option2 == option3){
+                            // lb a lb
+                            alert(parseInt(option1) + ' lb  = ' + parseInt(option1) + ' lb.');
+                        }
+                        else if(option3 == '3'){
+                            //lb a g
+                            var resultado = parseInt(option1) * 454;
+                            alert(parseInt(option1) + ' lb  = ' + resultado + ' g.' );
+                        }
+                        else if(option3=='5'){
+                            //lb a kg
+                            var resultado = parseInt(option1) * .454;
+                            alert(parseInt(option1) + ' lb  = ' + resultado + ' kg.' );
+                        }
+                        else if(option3 =='11'){
+                            //lb a ton
+                            var resultado = parseInt(option1) / 2000;
+                            alert(parseInt(option1) + ' lb  = ' + resultado + ' ton.' );
+                        }
+                        else
+                            alert('La conversion no es posible!');    
+                        break;
+                    case '10':
+                        if(option2 == option3){
+                            // oz a oz
+                            alert(parseInt(option1) + ' oz  = ' + parseInt(option1) + ' oz.');
+                        }
+                        else if (option3 =='2'){
+                            // oz a l
+                            var resultado = parseInt(option1) / 33.814;
+                            alert(parseInt(option1) + ' oz  = ' + resultado + ' L.' );
+                        }
+                        else
+                            alert('La conversion no es posible!');    
+                        break;
+                    case '11':
+                        if(option2 == option3){
+                            // ton a ton
+                            alert(parseInt(option1) + ' lb  = ' + parseInt(option1) + ' lb.');
+                        }
+                        else if(option3=='3'){
+                            //ton a g
+                            var resultado = parseInt(option1) * 907185;
+                            alert(parseInt(option1) + ' ton  = ' + resultado + ' g.' );
+                        }
+                        else if( option3 =='5'){
+                            // ton a kg
+                            var resultado = parseInt(option1) * 907.185;
+                            alert(parseInt(option1) + ' ton  = ' + resultado + ' g.' );
+                        }
+                        else if(opption3 =='9'){
+                            // ton a lb
+                            var resultado = parseInt(option1) * 2000;
+                            alert(parseInt(option1) + ' ton  = ' + resultado + ' lb.' );
+                        }
+                        else
+                            alert('La conversion no es posible!');    
+                        break;
+
+
+
+
+
+                }
+
+        } 
+    </script>
+</html>
