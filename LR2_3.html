@@ -1,0 +1,42 @@
+<html>
+    <body>
+        <h1> Formulario de Registro</h1>
+        <form method="POST">
+            <p>
+                <label> Nombre:
+                    <input name = 'nombre' type="text" size="25" maxlength="30" required>
+                </label>
+            </p>
+
+            <p>
+                <label> Apellido:
+                    <input name = 'apellido' type="text" size="25" maxlength="30" required>
+                </label>
+            </p>
+
+            <p>
+                <label> Direccion de Correo Electronico:
+                    <input name = 'cec' type="text" size="25" maxlength="30" required>
+                </label>
+            </p>
+
+            <details open>
+                <summary>
+                    Encuesta Opcional
+                </summary>
+
+                <p>
+                    <label> En cual semestre se encuentra ?
+                        <input name = 'cec' type="number" size="25" maxlength="2" >
+                    </label>
+                </p>
+                
+            </details>
+
+            <p> 
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Borrar">
+            </p>
+        </form>
+    </body>
+</html>
