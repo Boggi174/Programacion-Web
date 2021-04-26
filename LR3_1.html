@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>
+            3.1
+        </title>
+    </head>
+    <body>
+        <script language = "javascript"  type="text/javascript">
+
+            function encrypt(){
+                var a = parseInt(document.getElementById('nombre').value);
+                if(Number.isInteger(a)){
+                    var arr = a.toString().split('').map(Number);
+                    var z = arr.length;
+                    if(z !=4){
+                        alert ("La informacion ingresada debe de ser de 4 digitos!");
+                    }else{
+                        console.log(arr);
+                        for(var i = 0 ; i<4 ; i++){
+                            arr[i]= (arr[i] + 7) % 10;
+                        }
+                        console.log(arr);
+                        var temp = arr[0];
+                        arr[0] = arr[2];
+                        arr[2]=temp;
+                        temp = arr[1];
+                        arr[1]=arr[3];
+                        arr[3]=temp;
+                        console.log(arr);
+                        document.write('<p> Numero encriptado = '+ arr[0]+arr[1]+arr[2]+arr[3]+ '<p>');
+
+                        
+                    }
+                }else{
+                    alert('La informacion ingresada no es un numero entero!');
+                }
+            }
+        </script>
+
+        <form>
+            <input type="text" name="nombre" id="nombre">
+            <button onclick="encrypt();"> Encriptar</button>
+        </form>
+    </body>
+</html>

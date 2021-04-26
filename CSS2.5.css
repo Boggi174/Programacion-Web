@@ -1,0 +1,20 @@
+div{
+    border: 1px;
+    background:turquoise;
+    color: springgreen;
+}
+
+.button{
+    transition-duration: .4s;
+    display:inline;
+    border:black;
+    padding: 1px;
+    margin: 1px;
+    background:white;
+    color:black;
+}
+
+.button:hover{
+    background: tomato;
+}
+
