@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>
+            Practica 3.4
+        </title>
+    </head>
+    <script language = "javascript"  type="text/javascript">
+        function mixup(){
+            var input = document.getElementById("input").value;
+            console.log(input);
+            var split = input.split('');
+            console.log(split);
+            var z = split.length;
+            console.log(z);
+            if(z !=5){
+                alert('La palabra ingresada debe de ser de 5 letras!');
+            }else{
+                console.log(split);
+                let resultados = [];
+                for( var i = 0 ; i < z ; i++){
+                    for (var j = 0 ; j < z ; j++){
+                        for (var k = 0 ; k < z ; k++){
+                            if ( i != j && j != k && i!= k){
+                                 resultados.push(split[i]+split[j]+split[k]);
+                                console.log(resultados);
+                            }
+                        }
+                    }
+                }
+                document.write('<textarea> Combinaciones '+ resultados + '</textarea>');
+            }
+        }
+    </script>
+    <body>
+        <textarea id="input"> </textarea>
+        <button onclick="mixup()">Click me!</button>
+    </body>
+</html>
