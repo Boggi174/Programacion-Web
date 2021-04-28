@@ -1,0 +1,40 @@
+<?xml version = '1.0'?>
+<?xml-stylesheet type="text/xsl" href="LR4.xsl"?>
+<articulo> 
+    <nombre>
+        Galletas Grandma Whitc.
+    </nombre>
+    <porcion cantida ='1'/>
+    <valor_nutrimental>
+        <calorias cantidad ='260'>
+            Calorias
+        </calorias>
+        <calorias_de_grasa cantidad ='100'>
+            Calorias de Grasa
+        </calorias_de_grasa>
+        <g_grasa cantidad='11'>
+            Gramos de grasa
+        </g_grasa>
+        <g_grasa_saturada cantidad = '2'>
+            Gramos de Grasa Saturada
+        </g_grasa_saturada>
+        <mg_colesterol cantidad = '5'>
+            Miligrams de Colesterol
+        </mg_colesterol>
+        <mg_sodio cantidad = '210'>
+            Miligramos de Sodio
+        </mg_sodio>
+        <g_carbohidratos cantidad ='36'>
+            Gramos de Carbohidratos
+        </g_carbohidratos>
+        <g_fibra cantidad = '2'>
+            Gramos de fibra
+        </g_fibra>
+        <g_azucares cantidad = '15'>
+            Gramos de Azucares
+        </g_azucares>
+        <g_proteina cantidad ='5'>
+            GFramos de Proteina
+        </g_proteina>
+    </valor_nutrimental>
+</articulo>

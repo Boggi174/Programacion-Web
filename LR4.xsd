@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+targetNamespace="https://www.w3schools.com"
+xmlns="https://www.w3schools.com"
+elementFormDefault="qualified">
+<xs:element name="articulo">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element name="nombre" type="xs:string" />
+            <xs:element name="porcion" type="xs:integer"/>
+            <xs:element name="valor_nutrimental">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="calorias" type="xs:integer"/>
+                        <xs:element name="calorias_de_grasa" type="xs:integer"/>
+                        <xs:element name="g_grasa" type="xs:integer"/>
+                        <xs:element name="g_grasa_saturada" type="xs:integer"/>
+                        <xs:element name="mg_colesterol" type="xs:integer"/>
+                        <xs:element name="mg_sodio" type="xs:integer"/>
+                        <xs:element name="g_carbohidratos" type="xs:integer"/>
+                        <xs:element name="g_fibra" type="xs:integer"/>
+                        <xs:element name="g_azucares" type="xs:integer"/>
+                        <xs:element name="g_proteina" type="xs:integer"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+
+    </xs:complexType>
+</xs:element>
+</xs:schema>
